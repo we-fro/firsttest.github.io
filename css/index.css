@@ -1,0 +1,540 @@
+@charset "UTF-8";
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+.clearfix {
+    *zoom: 1
+}
+body {
+    -webkit-text-size-adjust: 100% !important;
+}
+.warpper {
+    height: 1000px;
+    width: 100%;
+}
+.sun {
+    background: url(../image/sun.jpg);
+    background-size: cover;
+}
+.rain {
+    background: url(../image/rain.jpg);
+    background-size: cover;
+}
+.snow {
+    background: url(../image/snow.jpg);
+    background-size: cover;
+}
+.cloud {
+    background: url(../image/cloud.jpg);
+    background-size: cover;
+}
+.fog {
+    background: url(../image/fog.jpg);
+    background-size: cover;
+}
+.light {
+    background: url(../image/light.jpg);
+    background-size: cover;
+}
+.night {
+    background: url(../image/night.jpg);
+    background-size: cover;
+}
+.cloudnight {
+    background: url(../image/cloudynight.jpg);
+    background-size: cover;
+}
+.icontop {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 3.5rem;
+    color: #fff;
+}
+.main {
+    position: relative;
+    top: 8rem;
+    margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+    html {
+        font-size: 8px;
+    }
+    .warpper {
+        height: 800px;
+    }
+    .main {
+        width: 100%;
+    }
+    .main .title {
+        font-size: 3rem;
+    }
+    .main .choosebox {
+        height: 3rem;
+        line-height: 3rem;
+        font-size: 1.9rem;
+    }
+    .searchbox .search {
+        width: 70%;
+    }
+    .searchbox .search img {
+        top: .8rem;
+        width: 2rem;
+        height: 2rem;
+    }
+    .searchbox .search input {
+        height: 3.5rem;
+        font-size: 1.8rem;
+        margin-left: -2rem;
+    }
+    .searchbox .search span {
+        top: 0.8rem;
+        right: .5rem;
+        font-size: 1rem;
+    }
+    .searchbox .search .slide {
+        top: 28px;
+    }
+    .choosebox .choose {
+        width: 60%;
+    }
+    .choosebox .cpbox {
+        width: 100%;
+    }
+    .choosebox .choose select {
+        width: 10rem;
+        height: 3rem;
+    }
+    .choose .down::after {
+        top: 1rem;
+    }
+    .choosebox .choose .btn {
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+    }
+    .choose .btn img {
+        width: 2rem;
+        height: 2rem;
+        margin: 0.5rem 0;
+        padding: 0;
+    }
+    .choose span {
+        display: none;
+    }
+    .main .realtimebox {
+        width: 100%;
+    }
+    .main .realtimebox>p {
+        height: 30px;
+        width: 80%;
+        margin: 5px auto;
+        font-size: 10px;
+    }
+    .realtimebox .realtime {
+        width: 80%;
+        height: 430px;
+    }
+    .realtime .realtime_l {
+        width: 100%;
+    }
+    .realtime .realtime_l li {
+        float: left;
+        width: 30%;
+        margin-left: 1.5%;
+        margin-bottom: 5px;
+        line-height: 24px;
+        text-align: center;
+        vertical-align: middle;
+    } 
+    .realtime .realtime_l li img {
+        width: 15%;
+        height: 15px;
+        margin-top: 5px;
+        vertical-align: top;
+    }
+    .realtime .realtime_l span {
+        width: 65%;
+        height: 20px;
+        line-height: 20px;
+    }
+    .realtime_r {
+        width: 100%;
+    }
+    .realtime_r .table {
+        width: 94%;
+        margin-left: 1.5%;
+    }
+    .xy .rt {
+        width: 8.2%;
+    }
+    .xy .rt p {
+        transform: scale(0.7);
+    }
+    .xy .rt i {
+        bottom: 2.3rem;
+        height: 2.3rem;
+        font-size: 2.3rem;
+    }
+    .xy .rt div {
+        bottom: 38px;
+    }
+    .xy .rt div span {
+        width: 26%;
+        margin: 0 37%;
+        border-radius: 4px;
+        background-color: cornflowerblue;
+    }
+    .xy .rt div em {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    html {
+        font-size: 12px;
+    }
+    .main {
+        width: 750px;
+    }
+    .realtimebox .realtime {
+        height: 34rem;
+    }
+    .realtime .realtime_l {
+        width: 100%;
+    }
+    .realtime_l li {
+        float: left;
+        width: 15rem;
+    } 
+    .realtime_r {
+        width: 100%;
+    }
+    .realtime_r .table {
+        width: 46.3rem;
+    }
+    .xy .rt {
+        width: 3.83rem;
+    }
+    .xy .rt p {
+        font-size: 1.1rem;
+    }
+    .xy .rt i {
+        bottom: 2rem;
+        width: 2rem;
+        height: 2rem;
+        margin: 0 0.75rem;
+        font-size: 2rem;
+    }
+    .xy .rt div span {
+        width: 0.75rem;
+        margin: 0 1.4rem;
+        border-radius: 4px;
+        background-color: cornflowerblue;
+    }
+    .xy .rt div em {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    html {
+        font-size: 14px;
+    }
+    .main {
+        width: 970px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    html {
+        font-size: 16px;
+    }
+    .main {
+        width: 1170px;
+    }
+}
+.father {
+    position: relative;
+}
+.middle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.title {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+}
+.title span {
+    font-size: 20px;
+}
+.searchbox {
+    height: 4rem;
+    margin-top: 30px;
+    z-index: 999;
+}
+.search {
+    width: 33rem;
+    height: 100%;
+}
+.search img {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    opacity: 0.3;
+}
+.search input {
+    width: 100%;
+    height: 45px;
+    line-height: 50px;
+    padding-left: 45px;
+    margin-left: -10px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+    border-radius: 20px;
+}
+.search span {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+.search .slide {
+    position: absolute;
+    top: 45px;
+    left: 3.6rem;
+    width: 80%;
+    border-radius: 0 0 10px 10px;
+    background-color: #fff;
+    opacity: 0.9;
+    overflow: hidden;
+}
+.search .slide li {
+    height: 35px;
+    padding: 0 10px;
+    line-height: 35px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.search .slide li:hover {
+    background-color: teal;
+    color: #fff;
+}
+.search p {
+    padding-left: 20px;
+    margin-top: 5px;
+    font-size: 14px;
+    color: rgb(228, 228, 228);
+}
+.choosebox {
+    height: 2rem;
+    line-height: 2rem;
+    margin-top: 50px;
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #fff;
+    z-index: 1;
+}
+.choose {
+    height: 100%;
+    /* width: 35rem; */
+}
+.cpbox {
+    width: 35rem;
+}
+.choose select {
+    width: 7rem;
+    height: 2rem;
+    padding-left: 1.3rem;
+    margin-left: 1rem;
+    border-radius: 5px;
+    vertical-align: top;
+    outline: none;
+    /* 清除样式 */
+    appearance: none;
+}
+.down {
+    position: relative;
+    float: left;
+    margin-right: 1.4rem;
+}
+.down::after {
+    content: '';
+    position: absolute;
+    right: 0.63rem;
+    top: 0.63rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    transform: rotate(45deg);
+    /* 不对指针事件反应就像被忽略穿透 */
+    pointer-events: none; 
+}
+.btn {
+    float: left;
+    width: 6.5rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 1rem;
+    margin-left: 0.6rem;
+    background-color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(100, 100, 100);
+    cursor: pointer;
+    text-align: center;
+}
+.btn img {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-top: 0.25rem;
+    margin-left: 0.3rem;
+}
+.realtimebox {
+    margin-top: 4rem;
+}
+.realtimebox>p {
+    width: 50rem;
+    margin: 10px auto;
+    padding-left: 30px;
+    font-size: 16px;
+    font-weight: 900;
+    color: #fff;
+}
+.realtimebox p span {
+    display: inline-block;
+    max-width: 60px;
+    margin-left: 3%;
+    margin-top: -2px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+.province {
+    background-color: cadetblue;
+}
+.city {
+    background-color: sandybrown;
+}
+.weather {
+    background-color: rgb(204, 116, 204);
+}
+.realtime {
+    width: 47.5rem;
+    height: 300px;
+    padding: 1.3rem;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-weight: 900;
+    color: rgb(70, 70, 70);
+}
+.realtime_l {
+    float: left;
+    width: 16.25rem;
+    font-size: 0.88rem;
+    color: rgb(66, 12, 173);
+}
+.realtime_l li {
+    margin-left: 10px;
+    margin-bottom: 19px;
+}
+.realtime_l img {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: 5px;
+    vertical-align: top;
+}
+.realtime_l span {
+    display: block;
+    float: right;
+    width: 6.3rem;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    margin-right: 2rem;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    color: #000;
+}
+.realtime_r {
+    float: left;
+}
+.realtime_r h3 {
+    font-size: 14px;
+    font-weight: 900;
+    margin-top: .5rem;
+    text-align: center;
+}
+.table {
+    width: 30rem;
+    height: 220px;
+    border-radius: 10px;
+    margin-top: 1rem;
+    padding: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.rt {
+    position: relative;
+    float: left;
+    width: 2.5rem;
+    height: 220px;
+}
+.rt p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+.rt i {
+    position: absolute;
+    bottom: 1.5rem;
+    width: 100%;
+    height: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.rt div {
+    position: absolute;
+    bottom: 46px;
+    width: 100%;
+    height: 25px;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3;
+}
+.rt div span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 0.5rem;
+    margin: 0 1rem;
+    border-radius: 4px;
+    background-color: cornflowerblue;
+}
+.rt div em {
+    font-size: 1rem;
+}
+.realtime_r>p {
+    margin-top: 4px;
+    text-align: right;
+}

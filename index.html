@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+    <title>myWeather</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <script src="./js/ajax.js"></script>
+    <script src="./js/info.js"></script>
+    <script src="./js/hefengget.js"></script>
+</head>
+
+<body>
+    <div class="warpper">
+        <!-- 顶部图标 -->
+        <div class="icontop">
+        </div>
+        <!-- 主体 -->
+        <div class="main">
+            <div class="title">
+                myWeather <span>天气查询</span>
+            </div>
+            <!-- 搜索模块 -->
+            <div class="searchbox father">
+                <div class="search middle">
+                    <img src="./icons/搜索.svg" alt="">
+                    <input type="text" placeholder="城市名称"><span>ENTER</span>
+                    <ul class="slide"></ul>
+                    <p>支持模糊搜索 例如:beij; <br>仅支持市、区名称搜索.</p>
+                </div>
+            </div>
+            <!-- 下拉列表搜索 -->
+            <div class="choosebox father">
+                <div class="choose middle">
+                    <div class="cpbox clearfix">
+                        <div class="countrybox down">
+                            所属省
+                            <select name="province" id="province">
+                                <option value="">请选择</option>
+                            </select>
+                        </div>
+                        <div class="citybox down">
+                            所在市
+                            <select name="city" id="city">
+                                <option value="">请选择</option>
+                            </select>
+                        </div>
+                        <div class="btn"><img src="./icons/搜索.svg" alt=""><span> search</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 本地实时 -->
+            <div class="realtimebox father clearfix">
+                <p>实时天气信息 <span class="province"></span><span class="city"></span><span class="weather"></span></p>
+                <div class="realtime middle">
+                    <ul class="realtime_l">
+                        <li class="temp"><img src="./icons/温度 (1).svg"> 温度 <span></span></li>
+                        <li class="humidity"><img src="./icons/湿度 (1).svg"> 湿度 <span></span></li>
+                        <li class="feels"><img src="./icons/体感温度.svg"> 体感温度 <span></span></li>
+                        <li class="wind"><img src="./icons/2001.svg"> 风向强度 <span></span></li>
+                        <li class="precip"><img src="./icons/降水量.svg"> 降水量 <span></span></li>
+                        <li class="pressure"><img src="./icons/大气压.svg"> 大气压 <span></span></li>
+                        <li class="vis"><img src="./icons/能见度.svg"> 能见度 <span></span></li>
+                        <li class="aqi"><img src="./icons/aqi.svg"> AQI <span></span></li>
+                    </ul>
+                    <div class="realtime_r">
+                        <h3>未来24小时预测</h3>
+                        <div class="table">
+                            <ul class="xy">
+                                <li class="rt">
+                                    <div><em>8°</em><span></span></div><i class="qi-100"></i>
+                                    <p>5PM</p>
+                                </li>
+                                <li class="rt">
+                                    <div><em></em><span></span></div><i></i>
+                                    <p></p>
+                                </li>
+                                <li class="rt">
+                                    <div><em></em><span></span></div><i></i>
+                                    <p></p>
+                                </li>
+                                <li class="rt">
+                                    <div><em></em><span></span></div><i></i>
+                                    <p></p>
+                                </li>
+                                <li class="rt">
+                                    <div><em></em><span></span></div><i></i>
+                                    <p></p>
+                                </li>
+                                <li class="rt">
+                                    <div><em></em><span></span></div><i></i>
+                                    <p></p>
+                                </li>
+                                <li class="rt">
+                                    <div><em></em><span></span></div><i></i>
+                                    <p></p>
+                                </li>
+                                <li class="rt">
+                                    <div><em></em><span></span></div><i></i>
+                                    <p></p>
+                                </li>
+                                <li class="rt">
+                                    <div><em></em><span></span></div><i></i>
+                                    <p></p>
+                                </li>
+                                <li class="rt">
+                                    <div><em></em><span></span></div><i></i>
+                                    <p></p>
+                                </li>
+                                <li class="rt">
+                                    <div><em></em><span></span></div><i></i>
+                                    <p></p>
+                                </li>
+                                <li class="rt">
+                                    <div><em></em><span></span></div><i></i>
+                                    <p></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>以上数据来自和风天气</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jsonp 顺便调用请求 -->
+    <script src="https://api.map.baidu.com/location/ip?ak=7Azpz5cNXH8qjITItFPbGZH83Sq77Tg7&callback=handle"></script>
+    <script src="./js/search.js"></script>
+    <script>
+        // 禁止微信字体放大
+        (function () {
+            if (typeof (WeixinJSBridge) == "undefined") {
+                document.addEventListener("WeixinJSBridgeReady", function (e) {
+                    setTimeout(function () {
+                        WeixinJSBridge.invoke('setFontSizeCallback', { "fontSize": 0 }, function (res) {
+                            // alert(JSON.stringify(res));
+                        });
+                    }, 0);
+                });
+            } else {
+                setTimeout(function () {
+                    WeixinJSBridge.invoke('setFontSizeCallback', { "fontSize": 0 }, function (res) {
+                        // alert(JSON.stringify(res));
+                    });
+                }, 0);
+            }
+        })();
+    </script>
+</body>
+
+</html>
